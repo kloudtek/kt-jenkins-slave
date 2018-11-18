@@ -1,4 +1,5 @@
 FROM jenkins/jnlp-slave:3.27-1
+
 MAINTAINER Koudtek <info@kloudtek.com>
 
 USER root
