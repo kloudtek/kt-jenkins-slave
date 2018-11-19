@@ -10,9 +10,8 @@ ARG AGENT_WORKDIR=/home/${user}/agent
 ENV HOME /home/${user}
 
 COPY setup.sh /sbin/setupimg
-RUN bash /sbin/setupimg
 COPY jenkins-slave.sh /usr/bin/jenkins-slave
-RUN chmod +x /usr/bin/jenkins-slave
+RUN bash /sbin/setupimg
 
 USER ${user}
 

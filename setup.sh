@@ -1,5 +1,7 @@
 #!/bin/bash
 
+chmod +x /usr/bin/jenkins-slave
+
 export DEBIAN_FRONTEND=noninteractive
 apt-get update
 apt-get install -yq openjdk-8-jre curl npm
