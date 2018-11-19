@@ -11,6 +11,8 @@ ENV HOME /home/${user}
 
 COPY setup.sh /sbin/setupimg
 RUN bash /sbin/setupimg
+COPY jenkins-slave.sh /usr/bin/jenkins-slave
+RUN chmod +x /usr/bin/jenkins-slave
 
 USER ${user}
 
@@ -21,6 +23,4 @@ VOLUME /home/${user}/.jenkins
 VOLUME ${AGENT_WORKDIR}
 WORKDIR /home/${user}
 
-COPY jenkins-slave.sh /usr/local/bin/jenkins-slave
-
-ENTRYPOINT ["jenkins-slave"]
+ENTRYPOINT ["/usr/bin/jenkins-slave"]
