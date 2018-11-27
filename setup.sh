@@ -1,10 +1,12 @@
 #!/bin/bash
 
+set -e
+
 chmod +x /usr/bin/jenkins-slave
 
 export DEBIAN_FRONTEND=noninteractive
 apt-get update
-apt-get install -yq curl openjdk-8-jdk curl nodejs npm git
+apt-get install -yq curl openjdk-8-jdk curl nodejs npm git gpg
 echo "Creating group ${group} with GUID ${gid}"
 addgroup --gid ${gid} ${group}
 adduser --home $HOME --uid ${uid} --ingroup ${group} --disabled-password --gecos "" ${user}
