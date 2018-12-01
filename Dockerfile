@@ -7,6 +7,10 @@ ARG gid=10000
 ARG VERSION=3.27
 ARG AGENT_WORKDIR=/home/${user}/agent
 
+ENV LANG=C.UTF-8
+ENV LANGUAGE en_US:en
+ENV LC_ALL=C.UTF-8
+
 ENV HOME /home/${user}
 
 COPY setup.sh /sbin/setupimg
