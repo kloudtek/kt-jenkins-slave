@@ -1,4 +1,4 @@
-FROM kt-build-docker-image:latest
+FROM kloudtek/kt-build-docker-image:latest
 
 ARG user=jenkins
 ARG group=jenkins
